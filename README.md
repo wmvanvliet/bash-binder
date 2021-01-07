@@ -1,7 +1,7 @@
 # Bash binder repository
 
 LINK: [Start with
-Binder](https://mybinder.org/v2/gh/AaltoSciComp/bash-binder/HEAD?urlpath=terminals%2F1)
+Binder](https://mybinder.org/v2/gh/AaltoSciComp/bash-binder/HEAD?urlpath=terminals%2Fnew)
 
 This repository does nothing other than produces a Bash shell using
 mybinder.org: the link goes directly to a terminal.  It is useful for
