@@ -7,12 +7,17 @@ RUN set -x && \
     apt-get update && \
     apt install -y \
         bash-completion \
+        dictionaries-common \
         emacs-nox \
         git \
+        htop \
         less \
         man-db manpages \
         nano \
+        psmisc \
+        screen \
         sudo \
+        tmux \
         vim-tiny \
     && \
     apt-get clean  &&  rm -r /var/lib/apt/lists/*
