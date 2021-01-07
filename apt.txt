@@ -1,0 +1,7 @@
+bash-completion
+emacs-nox
+less
+man-db
+manpages
+nano
+vim-tiny
