@@ -28,6 +28,11 @@ RUN pip install bash_kernel
 #        && \
 #    rm -r /var/lib/apt/lists/*
 
+RUN \
+    sudo ln -sf /bin/bash /bin/sh && \
+    mkdir .jupyter && \
+    echo 'c.NotebookApp.terminado_settings = {"shell_command":"/bin/bash"}' > .jupyter/jupyter_notebook_config.py
+
 # create user with a home directory
 ARG NB_USER
 ARG NB_UID
