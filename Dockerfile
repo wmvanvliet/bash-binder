@@ -29,7 +29,7 @@ RUN pip install bash_kernel
 #RUN yes | unminimize && \
 #    apt-get install -y \
 #        man-db \
-#	manpages \
+#       manpages \
 #        && \
 #    rm -r /var/lib/apt/lists/*
 
