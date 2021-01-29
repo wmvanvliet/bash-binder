@@ -75,7 +75,9 @@ RUN echo 'You found the first flag! Great start. To find the next flag, you must
 RUN mkdir ${HOME}/suspicious_subdir
 RUN echo 'You found the second flag! You are on a roll! To find the next flag, you must inspect your environment closely' > ${HOME}/suspicious_subdir/flag2
 
-ENV flag3 "You found the third flag! This is the end for now"
-#ENV flag3 "You found the third flag! The next flag is cleverly hidden in your HOME dir, and you never even noticed, bwahahahah!"
+ENV flag3 "You found the third flag! The next flag is cleverly hidden in your HOME dir, and you never even noticed, bwahahahah!"
 
-# RUN wget https://archive.org/stream/Orwell1984preywo/orwell1984preywo_djvu.txt > ${HOME}/.flag4
+RUN echo "You found the fourth flag! To find the next flag, you must read George Orwell's classic distopian novel. Have fun!" > ${HOME}/.flag4
+
+RUN wget http://gutenberg.net.au/ebooks01/0100021.txt -O ${HOME}/tmp.txt
+RUN sed '8746iflag5: You have found the fifth flag! This is the end for now.' ${HOME}/tmp.txt > ${HOME}/George_Orwell_1984.txt
