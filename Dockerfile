@@ -83,7 +83,5 @@ RUN wget http://gutenberg.net.au/ebooks01/0100021.txt -O ${HOME}/tmp.txt
 RUN sed '8746iflag5: You have found the fifth flag! The sixth flag is running in the background.' ${HOME}/tmp.txt > ${HOME}/George_Orwell_1984.txt
 RUN rm ${HOME}/tmp.txt
 
-RUN echo 'while true; do echo $1; sleep 5; done' > /tmp/flag6
-RUN sh /tmp/flag6 "You have found the sixth flag! This is the end for now." &
-RUN rm /tmp/flag6
-
+RUN echo 'rm /tmp/flag6; while true; do echo $1; sleep 5; done' > /tmp/flag6
+ENTRYPOINT ["sh /tmp/flag6 'You have found the sixth flag! This is the end for now.' &"]
