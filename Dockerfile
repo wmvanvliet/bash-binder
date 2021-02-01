@@ -85,7 +85,7 @@ RUN rm ${HOME}/tmp.txt
 
 RUN mkdir ${HOME}/bin
 RUN dd if=/dev/random bs=1024 count=1024 > ${HOME}/bin/garbage
-RUN echo "You have found the sixth flag! The next flag is running as a background process." >> ${HOME}/bin/garbage
+RUN echo "flag6: You have found the sixth flag! The next flag is running as a background process." >> ${HOME}/bin/garbage
 RUN dd if=/dev/random bs=1024 count=1024 >> ${HOME}/bin/garbage
 
 # Run the startup script
