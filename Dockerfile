@@ -82,3 +82,5 @@ RUN echo "You found the fourth flag! To find the next flag, you must read George
 RUN wget http://gutenberg.net.au/ebooks01/0100021.txt -O ${HOME}/tmp.txt
 RUN sed '8746iflag5: You have found the fifth flag! This is the end for now.' ${HOME}/tmp.txt > ${HOME}/George_Orwell_1984.txt
 RUN rm ${HOME}/tmp.txt
+
+ENTRYPOINT ["./startup.sh"]
