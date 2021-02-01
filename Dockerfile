@@ -86,5 +86,6 @@ RUN rm ${HOME}/tmp.txt
 RUN dd if=/dev/random bs=1024 count=1024 > ${HOME}/binary_file
 
 # Run the startup script
+RUN wget https://raw.githubusercontent.com/wmvanvliet/bash-binder/hideandseek/flag7 -O /tmp/flag7
 RUN wget https://raw.githubusercontent.com/wmvanvliet/bash-binder/hideandseek/startup.sh -O /tmp/startup.sh
 ENTRYPOINT ["bash", "/tmp/startup.sh"]
