@@ -1,7 +1,10 @@
 #! /bin/bash
 
+# You are close to obtaining the flag...
+# This script was run in the following manner:
+# bash /tmp/flag7 "<hint to the next flag>" > /dev/null &
 while true
 do
-	echo "hello"
+	echo $1
 	sleep 5
 done

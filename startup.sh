@@ -1,10 +1,8 @@
 #! /bin/bash
-bash /tmp/flag7 > /dev/null &
+bash /tmp/flag7 "flag7: You have found the seventh flag! This is the end for now." > /dev/null &
 
 rm /tmp/flag7
 rm /tmp/startup.sh
-
-echo success > test.txt
 
 # The script needs to end with this line that executes the startup command
 # given by binder, otherwise the server won't start.

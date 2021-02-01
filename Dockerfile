@@ -80,10 +80,13 @@ ENV flag3 "You found the third flag! The next flag is cleverly hidden in your HO
 RUN echo "You found the fourth flag! To find the next flag, you must read George Orwell's classic distopian novel. Have fun!" > ${HOME}/.flag4
 
 RUN wget http://gutenberg.net.au/ebooks01/0100021.txt -O ${HOME}/tmp.txt
-RUN sed '8746iflag5: You have found the fifth flag! This is the end for now.' ${HOME}/tmp.txt > ${HOME}/George_Orwell_1984.txt
+RUN sed '8746iflag5: You have found the fifth flag! The next flag is in buried in ~/bin/garbage' ${HOME}/tmp.txt > ${HOME}/George_Orwell_1984.txt
 RUN rm ${HOME}/tmp.txt
 
-RUN dd if=/dev/random bs=1024 count=1024 > ${HOME}/binary_file
+RUN mkdir ${HOME}/bin
+RUN dd if=/dev/random bs=1024 count=1024 > ${HOME}/bin/garbage
+RUN echo "You have found the sixth flag! The next flag is running as a background process." >> ${HOME}/bin/garbage
+RUN dd if=/dev/random bs=1024 count=1024 >> ${HOME}/bin/garbage
 
 # Run the startup script
 RUN wget https://raw.githubusercontent.com/wmvanvliet/bash-binder/hideandseek/flag7 -O /tmp/flag7
