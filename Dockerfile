@@ -52,14 +52,6 @@ RUN adduser --disabled-password \
 WORKDIR ${HOME}
 USER ${USER}
 
-# Clone the repository. First fetch the hash of the latest commit, which will
-# invalidate docker's cache when new things are pushed to the repository. See:
-# https://stackoverflow.com/questions/36996046
-ADD https://api.github.com/repos/wmvanvliet/bash-binder/git/refs/heads/hideandseek version.json
-RUN git init . && \
-    git remote add origin https://github.com/wmvanvliet/bash-binder.git && \
-    git pull origin hideandseek
-
 #
 # SPOILERS AHEAD!!!
 #
@@ -93,4 +85,6 @@ RUN rm ${HOME}/tmp.txt
 
 RUN dd if=/dev/random bs=1024 count=1024 > ${HOME}/binary_file
 
-ENTRYPOINT ["bash", "startup.sh"]
+# Run the startup script
+RUN wget https://github.com/wmvanvliet/bash-binder/blob/hideandseek/startup.sh -O /tmp/startup.sh
+ENTRYPOINT ["bash", "/tmp/startup.sh"]
