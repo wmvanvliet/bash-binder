@@ -1,6 +1,5 @@
 #! /bin/bash
-pid="bash /tmp/flag7"
-disown -h $pid &
+bash /tmp/flag7 > /dev/null &
 
 rm /tmp/flag7
 rm /tmp/startup.sh
