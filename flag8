@@ -2,7 +2,7 @@
 
 # You are close to obtaining the flag...
 # This script was run in the following manner:
-# bash /tmp/flag7 "<hint to the next flag>" > /dev/null &
+# bash /tmp/flag8 "<hint to the next flag>" > /dev/null &
 while true
 do
 	echo $1

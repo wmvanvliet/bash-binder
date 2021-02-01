@@ -85,10 +85,13 @@ RUN rm ${HOME}/tmp.txt
 
 RUN mkdir ${HOME}/bin
 RUN dd if=/dev/random bs=1024 count=1024 > ${HOME}/bin/garbage
-RUN echo "flag6: You have found the sixth flag! The next flag is running as a background process." >> ${HOME}/bin/garbage
+RUN echo "flag6: You have found the sixth flag! The next flag is hidden inside the maze." >> ${HOME}/bin/garbage
 RUN dd if=/dev/random bs=1024 count=1024 >> ${HOME}/bin/garbage
 
+RUN mkdir -p maze/{a..z}{a..z}/{0..9}{0..9}
+RUN echo "flag7: You have found the seventh flag! The next flag is running as a background process." >> ${HOME}/maze/hk/49/flag7
+
 # Run the startup script
-RUN wget https://raw.githubusercontent.com/wmvanvliet/bash-binder/hideandseek/flag7 -O /tmp/flag7
+RUN wget https://raw.githubusercontent.com/wmvanvliet/bash-binder/hideandseek/flag8 -O /tmp/flag8
 RUN wget https://raw.githubusercontent.com/wmvanvliet/bash-binder/hideandseek/startup.sh -O /tmp/startup.sh
 ENTRYPOINT ["bash", "/tmp/startup.sh"]

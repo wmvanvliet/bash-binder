@@ -1,5 +1,5 @@
 #! /bin/bash
-bash /tmp/flag7 "flag7: You have found the seventh flag! This is the end for now." > /dev/null &
+bash /tmp/flag8 "flag8: You have found the eighth flag! This is the end for now." > /dev/null &
 
 # Hide our tracks
 rm /tmp/startup.sh
