@@ -2,6 +2,6 @@
 
 while true
 do
-	print "hello"
+	echo "hello"
 	sleep 5
 done
